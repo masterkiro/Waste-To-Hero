@@ -1,6 +1,6 @@
 body {
-  font-family: 'Arial', sans-serif;
-  background: linear-gradient(135deg, #e8f5e8 0%, #c8e6c9 100%);
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg,#e8f5e8 0%,#c8e6c9 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,29 +8,19 @@ body {
   padding: 20px;
 }
 .container { max-width: 1000px; width: 100%; }
-#gameCanvas {
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 100, 0, 0.2);
-  margin: 20px auto;
-  display: block;
-  touch-action: none;
-}
-.score-display {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2e7d32;
-  text-align: center;
-  margin-bottom: 15px;
-}
-.hidden { display: none; }
-button {
-  background: linear-gradient(45deg, #4caf50, #66bb6a);
-  color: white;
-  border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-}
+h1 { color:#2e7d32; margin-bottom:16px; text-align:center; }
+.game-info { background:rgba(255,255,255,0.95); border-radius:12px; padding:16px; margin-bottom:12px; box-shadow:0 4px 16px rgba(0,0,0,0.08); }
+.score-display { font-size:20px; font-weight:700; color:#2e7d32; text-align:center; margin-bottom:10px; }
+.controls { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+button { background:linear-gradient(45deg,#4caf50,#66bb6a); color:#fff; border:none; padding:10px 18px; border-radius:20px; cursor:pointer; font-weight:700; }
+.level-indicator { background:#e8f5e8; padding:8px 14px; border-radius:16px; color:#388e3c; font-weight:700; }
+.trash-guide { display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:10px; margin-top:8px; }
+.trash-type { padding:10px; border-radius:8px; color:#fff; font-weight:700; text-align:center; }
+.organic { background:linear-gradient(45deg,#4caf50,#388e3c); }
+.anorganik { background:linear-gradient(45deg,#ffeb3b,#fbc02d); color:#222; }
+.residu { background:linear-gradient(45deg,#f44336,#d32f2f); }
+canvas { background:#fff; border-radius:12px; box-shadow:0 8px 32px rgba(0,100,0,0.12); display:block; margin:16px auto; touch-action:none; }
+.game-menu,.game-over { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(255,255,255,0.98); padding:28px; border-radius:14px; box-shadow:0 16px 48px rgba(0,0,0,0.2); z-index:1000; min-width:320px; text-align:center; }
+.hidden { display:none; }
+.high-score { margin-top:10px; padding:10px; background:#e8f5e8; border-radius:10px; font-weight:700; }
+@media(max-width:768px){canvas{width:100%;height:auto}}

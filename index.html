@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Game Pemilahan Sampah</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -12,16 +12,13 @@
 
     <div class="game-info">
       <div class="score-display">
-        Skor: <span id="score">0</span> | 
-        Level: <span id="level">1</span>
+        Skor: <span id="score">0</span> | Level: <span id="level">1</span>
       </div>
 
       <div class="controls">
         <button id="startButton">Mulai Game</button>
         <button id="pauseButton">Jeda</button>
-        <div class="level-indicator">
-          🔄 Waktu: <span id="timeLeft">60</span>s
-        </div>
+        <div class="level-indicator">🔄 Waktu: <span id="timeLeft">60</span>s</div>
       </div>
 
       <div class="trash-guide">
@@ -36,15 +33,13 @@
     <div id="menuScreen" class="game-menu">
       <h2>🎮 Game Pemilahan Sampah</h2>
       <p>Seret sampah ke tempat sampah yang sesuai dengan warnanya!</p>
-      <p>Waktu: 60 detik | Level akan meningkat setiap 10 poin</p>
+      <p>Waktu: 60 detik | Level akan meningkat setiap 100 poin</p>
       <button id="menuStartButton">Mulai Bermain</button>
-      <div class="high-score" id="highScoreDisplay">
-        Skor Tertinggi: 0
-      </div>
+      <div class="high-score" id="highScoreDisplay">Skor Tertinggi: 0</div>
     </div>
 
     <div id="gameOverScreen" class="game-over hidden">
-      <h2>⏰ Game Over!</h2>
+      <h2>⏰ Waktu Habis!</h2>
       <p>Skor Akhir: <span id="finalScore">0</span></p>
       <p>Level Tertinggi: <span id="finalLevel">1</span></p>
       <button id="restartButton">Main Lagi</button>
