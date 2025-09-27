@@ -50,12 +50,15 @@ class Game {
   createTrashItem() {
     const types = ['organic', 'anorganik', 'residu'];
     const type = types[Math.floor(Math.random() * types.length)];
-    const size = 30 + Math.random() * 20;
+    const size = 50 + Math.random() * 30; // lebih besar
     const symbols = {
-      'organic': '🍎',
-      'anorganik': Math.random() < 0.5 ? '🥤' : '📄',
-      'residu': '🧪'
+      'organic': ['🍎','🍌','🍂'],
+      'anorganik': ['🥤','📄','🥡'],
+      'residu': ['🧪','🗑️','💡']
     };
+    const symbolList = symbols[type];
+    const symbol = symbolList[Math.floor(Math.random() * symbolList.length)];
+
     const trashItem = {
       x: Math.random() * (this.canvas.width - size),
       y: -size,
@@ -63,7 +66,7 @@ class Game {
       height: size,
       type: type,
       speed: 1 + (this.level * 0.2),
-      symbol: symbols[type]
+      symbol: symbol
     };
     this.trashItems.push(trashItem);
   }
@@ -77,7 +80,7 @@ class Game {
         this.trashItems.splice(i, 1);
       }
     }
-    if (Math.random() < 0.007 * this.level) this.createTrashItem();
+    if (Math.random() < 0.004 * this.level) this.createTrashItem();
   }
 
   render() {
@@ -90,6 +93,7 @@ class Game {
     });
     this.trashItems.forEach(item => {
       this.ctx.fillStyle = 'black';
+      this.ctx.font = item.width + "px Arial";
       this.ctx.fillText(item.symbol, item.x, item.y);
     });
     requestAnimationFrame(() => this.render());
