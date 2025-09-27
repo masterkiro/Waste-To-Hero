@@ -207,7 +207,7 @@
         }
       }
       // spawn: slower rate as requested
-      if (Math.random() < 0.004 * this.level) this.createTrashItem();
+      if (Math.random() < 0.0055 * this.level) this.createTrashItem();
     }
 
     render(){
