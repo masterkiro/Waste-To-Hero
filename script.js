@@ -99,9 +99,9 @@ class Game {
     const type = types[Math.floor(Math.random()*types.length)];
     const size = 50 + Math.random()*30;
     const symbols = {
-      'organic':['🍎','🍌','🍂'],
-      'anorganik':['🥤','📄','🥡'],
-      'residu':['🧪','🗑️','💡','😷','🧤'] // ✅ tambah masker & gloves
+      'organic':['🍎','🍌','🍂','🥦','🍇'],
+      'anorganik':['🥤','📄','🥡','🧴','🍾'],
+      'residu':['🧪','🗑️','💡','😷','🧤','🪦']
     };
     const symbolList = symbols[type];
     const symbol = symbolList[Math.floor(Math.random()*symbolList.length)];
