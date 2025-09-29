@@ -23,5 +23,5 @@ canvas { background:#fff; border-radius:12px; box-shadow:0 8px 32px rgba(0,100,0
 .game-menu,.game-over { position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(255,255,255,0.98); padding:28px; border-radius:14px; box-shadow:0 16px 48px rgba(0,0,0,0.2); z-index:1000; min-width:320px; text-align:center; }
 .hidden { display:none; }
 .high-score { margin-top:10px; padding:10px; background:#e8f5e8; border-radius:10px; font-weight:700; }
-.fun-fact { margin-top: 15px; font-style: italic; color: #2e7d32; font-weight: 600; }
+.fun-fact { margin-top: 15px; font-style: italic; color: #2e7d32; font-weight: 600; background:#f1f8e9; padding:8px 12px; border-radius:8px; }
 @media(max-width:768px){canvas{width:100%;height:auto}}
