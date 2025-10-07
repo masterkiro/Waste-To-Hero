@@ -210,7 +210,7 @@ class Game {
         this.updateUI();
       }
     }
-    if (Math.random() < 0.0075 * this.level) this.createTrashItem();
+    if (Math.random() < 0.8 + 0.0075 * this.level) this.createTrashItem();
   }
 
   render(){
