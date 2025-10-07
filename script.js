@@ -112,7 +112,7 @@ class Game {
       width: size,
       height: size,
       type: type,
-      speed: 1.5 + (this.level*0.1),
+      speed: 1.7 + (this.level*0.1),
       color: colors[type] || '#999',
       symbol: symbol
     };
@@ -210,7 +210,7 @@ class Game {
         this.updateUI();
       }
     }
-    if (Math.random() < 0.0085 * this.level) this.createTrashItem();
+    if (Math.random() < 0.0075 * this.level) this.createTrashItem();
   }
 
   render(){
