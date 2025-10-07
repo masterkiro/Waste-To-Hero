@@ -112,7 +112,7 @@ class Game {
       width: size,
       height: size,
       type: type,
-      speed: 1 + (this.level*0.15),
+      speed: 1.2 + (this.level*0.15),
       color: colors[type] || '#999',
       symbol: symbol
     };
